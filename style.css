@@ -65,7 +65,7 @@ font-size: 1.8rem;
 
 
 #header{
-background-image:url("../img/hana-trim.webp");
+background-image:url("img/hana-trim.webp");
 background-position: center top;
 background-repeat: no-repeat;
 background-size: cover;
@@ -307,7 +307,7 @@ position: absolute;
 }
 
 #footer .footer-mv{
-background-image:url("../img/BJ_artwork-scaled.jpg") ; 
+background-image:url("img/BJ_artwork-scaled.jpg") ; 
  background-repeat: no-repeat;
  background-position: center bottom;
  background-size: cover;
