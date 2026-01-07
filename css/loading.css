@@ -1,0 +1,62 @@
+
+
+
+/* ローディング画面 */
+#loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* ロゴの背景色に合わす */
+  background: #000000;
+  text-align: center;
+  z-index: 9999;
+}
+
+/* Loading画像中央配置　 */
+#splash_logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+
+/* Loading アイコンの大きさ設定　 */
+#splash_logo img {
+  width:100%;
+}
+
+/* fadeUpをするアイコンの動き */
+ .fadeUp{
+animation-name: fadeUpAnime;
+animation-duration:0.5s;
+/* アニメーション後も見た目を変えたままにしたいときに使う */
+animation-fill-mode:forwards;
+opacity: 0;
+}
+
+@keyframes fadeUpAnime{
+  from {
+    opacity: 0;
+  transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+  transform: translateY(0);
+  }
+} 
+
+/* 最初は白黒 */
+ #site-wrapper {
+  /* 色をすべて取り除いて、白黒にする */
+  filter: grayscale(100%);
+  transition: filter 2.5s ease;
+} 
+
+/* カラー状態 */
+#site-wrapper.is-color {
+  filter: grayscale(0%);
+} 

@@ -1,0 +1,26 @@
+.blur{
+	animation-name:blurAnime;
+	animation-duration:1s;
+    /* 終わったあとも、最後の状態を保つ */
+	animation-fill-mode:forwards;
+}
+
+@keyframes blurAnime{
+  from {
+    /* blur（ブラー）＝ ぼかす／ぼやかす */
+	filter: blur(10px);
+	transform: scale(1.02);
+	opacity: 0;
+  }
+
+  to {
+	filter: blur(0);
+	transform: scale(1);
+	opacity: 1;
+  }
+}
+ 
+/* pにそれぞれ.blurTriggerというclassを付与 */
+.blurTrigger{
+    opacity: 0;
+}

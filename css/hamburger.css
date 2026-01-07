@@ -1,0 +1,138 @@
+
+
+/* =====================
+   共通：位置は最初から固定
+===================== */
+
+/* SP用は完全に消す */
+.drawer-btn{ display: none; }
+.drawer-nav{
+  position: fixed;
+  top: 0;
+   transform: translateX(100%); /* 画面外（右）へ */
+    transition: transform .4s ease;
+}
+
+/* 開いた状態 */
+.drawer-nav.open{
+    transform: translateX(0);
+  /* 人物にかぶってok  幅が狭すぎると実際スマホでタップ不可能*/
+  width: 250px;
+  height: 80vh;
+  padding: 85px 10px 10px;
+  background-color: #fff;
+  opacity: .8;
+  overflow: hidden;
+  /* transition: right .4s ease; */
+  display: block;
+}
+
+
+
+/* =====================
+   SP
+===================== */
+@media screen and (max-width: 850px){
+
+  /* PCナビを消す */
+  nav .pc-nav{
+    display: none;
+  }
+
+  /* ハンバーガーだけ表示 */
+  .drawer-btn {
+    display: block;
+  }
+  /* 開いた状態 */
+  .drawer-nav.open{
+    right: 0;
+  }
+ 
+    /* 黒の箱 */
+.drawer-btn{
+    position: absolute;
+	cursor: pointer;
+    position: fixed;
+	border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    z-index: 999;
+    top: 20px;
+    right: 20px;
+}
+
+
+/* 3本の線 */
+.drawer-btn span{
+display: block;
+ transition: all .4s;/*アニメーションの設定*/
+ position: absolute;
+width: 30px;
+height: 2px;
+background-color: #ffde59;
+border-radius: 2px;
+/* top効かないのなぜ */
+/* top: 50%; */
+right: 15%;
+}
+
+.drawer-btn span:nth-child(1){
+/* transform: translate(-50% , -10px); */
+top: 15px;
+}
+
+.drawer-btn span:nth-child(2){
+/* transform: translate(-50% , -50%); */
+top: 23px;
+}
+
+.drawer-btn span:nth-child(3){
+/* transform: translate(-50% , 8px); */
+top: 31px;
+}
+
+/* ☓ */
+.drawer-btn.active span:nth-of-type(1) {
+    top: 14px;
+    left: 7px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 60%;
+}
+
+.drawer-btn.active span:nth-of-type(2) {
+	opacity: 0;/*真ん中の線は透過*/
+}
+
+.drawer-btn.active span:nth-of-type(3){
+    top: 26px;
+    left: 7px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 60%;
+}
+
+.drawer-nav.open li a{
+
+/* アコーディオン色味合わす？
+赤/白/黄色/黒 */
+color:  #860612; 
+}
+
+
+.drawer-nav.open li{
+padding-bottom: 30px;
+font-size: 1.8rem;
+}
+
+.hamburger-sns{
+ display: flex; 
+ 
+}
+
+
+.hamburger-sns li{
+padding-right: 30px;
+}
+
+
+}

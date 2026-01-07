@@ -1,0 +1,29 @@
+/*== hoverしたときに下線が伸びる */
+
+.btnlinestretches{
+    /*線の基点とするためrelativeを指定*/
+	position:relative;
+}
+
+/*hover前の線の設定（非表示）*/
+.btnlinestretches::after{
+	content:'';
+    /*絶対配置で線の位置を決める*/
+	position:absolute;
+	z-index:1;
+	bottom:0;
+	left:0;
+     /*線の形状*/  
+     width:0; 
+	height:2px;
+    background:#ccc;
+    /*アニメーションの指定*/
+	transition:all 0.3s ease-in-out;
+}
+
+
+ /*hover時に100%に伸びる*/   
+.btnlinestretches:hover::after {
+	width:100%;
+}
+

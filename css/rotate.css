@@ -1,0 +1,15 @@
+
+
+.fadeRotate {
+  opacity: 0;
+  /* 下に40pxずらす */
+  transform: translateY(40px)   ;
+  /* 0.8秒かけてease（ゆっくり始まってゆっくり終わる） */
+  transition: opacity 0.8s ease,
+              transform 0.8s ease;
+}
+
+.fadeRotate.is-show {
+  opacity: 1;
+  transform: translateY(0) rotateX(0);
+}

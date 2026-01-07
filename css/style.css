@@ -1,0 +1,619 @@
+ /*----------------
+CSS
+作成日：9/15
+作成者：辻中千晶
+サイト名：HANA
+----------------*/
+
+html {
+ font-size: 100%;
+}
+a {
+color: #FFFFFF;
+text-decoration: none;
+/*aタグの装飾を削除する*/
+}
+img {
+max-width: 100%;
+/*画像を親要素以上にしない*/
+vertical-align: bottom;
+/*画像の下に余白を作らない*/
+}
+li {
+list-style: none;
+/*liタグの装飾を削除する*/
+}
+
+body{
+color: #ffffff;
+font-size: 1.2rem;
+ background-color: #860612;
+ font-family:
+    "Noto Serif JP",
+    "Zen Kurenaido",
+    serif;
+}
+
+.wrapper{
+ margin: 0 auto;  
+ padding: 0 3%;
+}
+
+.sec-title{
+font-family: "Montserrat", "Noto Sans JP", sans-serif;
+ font-size: 3rem; 
+ margin:0 100px;
+ position: relative;
+ font-weight: bold;
+  text-shadow:
+   0 2px 0 #860612,
+     0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+
+
+/* はじめは疑似要素で指定 */
+/* .sec-title::after{
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100vw;
+  background-color: #ffde59;
+ position: absolute;
+  transform: translateX(-50%);
+  bottom: -10px; /* タイトルとの距離調整 
+} */
+
+.sec-line{
+  height: 2px;
+  width: 100vw;
+  background-color: #ffde59;
+}
+
+
+.title-area{
+ display: flex; 
+ align-items: center;
+}
+
+
+
+
+/***************************************************
+ *                 header             *
+ ***************************************************/
+
+
+#header{
+background-image:url("../img/hana-trim.webp");
+background-position: center top;
+background-repeat: no-repeat;
+background-size: cover;
+height: 125vh;
+padding: 42px;
+position: relative;
+width: 100%;
+margin-bottom: 52px;
+}
+
+#header .site-title span{
+ width: 25%;   
+ position: absolute;
+ top: 33%;
+}
+
+
+
+/* =====================
+   PC（デフォルト）
+===================== */
+nav .pc-nav{
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav .pc-nav li{
+  padding-right: 30px;
+}
+
+.drawer-nav{
+  display: none;
+}
+
+
+/***************************************************
+ *               セクション<vision>              *
+ ***************************************************/
+
+#vision .vision-text{
+padding: 100px 0 200px 0;
+}
+
+#vision .vision-text p{
+text-align: center;
+margin-bottom: 25px;
+}
+
+#vision .vision-text .point{
+ margin: 90px 0 90px 0; 
+}
+
+
+/***************************************************
+ *                 セクション<news>               *
+ ***************************************************/
+
+
+#news .list{
+padding:80px 100px 200px 550px ;          
+}
+
+#news li {
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+#news li h3{
+width: 100%;
+font-size: 1.2rem;
+padding: 50px 0px 0px 0px;
+text-align: right;
+border-bottom: 1px solid #ffde59;
+}
+
+/* #news dt:nth-of-type(4){ */
+ /* padding-top: 98px ; */
+/* } */
+
+#news .open-text{
+  text-align:  center;
+  font-size: 1rem;
+/* width: 90%;   */
+/* padding: 23px 0; */
+/* border-bottom: 1px solid #ffde59; */
+}
+
+/* #news dd:first-child{ */
+  /* padding:0 0 20px 0; */
+/* } */
+
+/* #news dd:nth-of-type(4){ */
+ /* padding: 43px 0; */
+/* } */
+
+/* はじめ疑似要素で指定　→ 崩れる */
+/* #news .list dt::after{
+ content: ""; 
+ display: block; 
+ width: 100%; 
+ height: 1px; 
+ background-color: #ffde59; 
+ } */
+
+/* #news .list dd::after{ 
+content: "";
+display: block;
+width: 100%;
+height: 1px;
+background-color: #ffde59;
+}*/
+
+
+
+/***************************************************
+ *                 セクション<about>               *
+ ***************************************************/
+
+
+
+/*はじめpositionで指定
+ #about {
+position: relative;  
+} */
+
+.about-sec-title-area{
+ text-align: center; 
+}
+
+#about .about-content{
+ display: flex;
+ justify-content: space-between; 
+ margin-bottom: 200px;
+}
+
+#about .img-sp{
+ display: none; 
+}
+
+#about .image-right{
+ order: 2;   
+ width:33%;   
+}
+
+#about .image-left{
+ width: 33%; 
+}
+
+#about .image-left img, #about .image-right img {
+  height: 750px;
+  object-fit: cover;
+  width: 100%;
+}
+
+#about .sec-title-about{
+ font-weight: bold;
+ font-size: 3rem;
+  text-shadow:
+   0 2px 0 #860612,
+     0 4px 8px rgba(0, 0, 0, 0.6);
+}
+
+#about .text-center{
+ width: 33%; 
+ margin-bottom: 50px;
+}
+
+/* はじめh2のpositionで指定
+でもaboutで100%のため画像から画像まで300％の数値設定。。
+縮小すると画像を突き抜けてしまうため空のdivタグ作成
+ */
+
+.about-underline{
+  height: 2px;
+  background-color: #ffde59;
+}
+
+#about .about-text{
+ text-align: center;   
+}
+
+#about .about-text p{
+margin-bottom:55px;
+}
+
+#about .about-text p:nth-of-type(1){
+ margin-top: 55px; 
+}
+
+#about .about-text p:nth-of-type(2) ,#about .about-text p:nth-of-type(3){
+  margin-bottom: 25px;
+}
+
+/* はじめpositionで指定　固定の仕方わからず */
+/* .about-text p:nth-of-type(3)::before { 
+  content: "× ";
+  font-weight: bold;
+   position: absolute; 
+  top: 280px; 
+   left: 800px; 
+} */
+
+
+
+/***************************************************
+ *                 セクション<honeys>               *
+ ***************************************************/
+
+
+#honeys{
+  margin-bottom: 50px;
+  /* はじめここの親タグではなくて、.img-leftに指定 */
+  position: relative;
+  height: 100vh;
+}
+
+#honeys .box{
+ display: flex;  
+  justify-content: space-between;
+}
+
+#honeys .img-left {
+ width: 50%;
+}
+
+#honeys .img-main{
+  width: 50%;
+}
+
+#honeys .MyM{
+position:absolute;
+top: 20%; 
+width: 26%;
+left: 70%;
+}
+
+#honeys .aina{
+ position: absolute; 
+ top: 45%;
+width: 15%;
+left: 5%;
+}
+
+#honeys .arisu{
+position: absolute;
+left: 18%;
+top: 14%;
+width: 20%;
+}
+
+#honeys .sairi{
+position: absolute; 
+width: 13%; 
+ left: 22%;
+top: 63%;
+}
+
+#honeys .nao{
+position: absolute;
+top:43%;
+left:39%;
+width: 15%;
+}
+
+#honeys .ryo{
+position: absolute; 
+ left:56% ; 
+ top: 23%;
+ width: 10%;
+}
+
+
+/***************************************************
+ *                フッター               *
+ ***************************************************/
+
+
+#footer{
+ display: flex;
+ flex-direction: column;
+ height: 120vh;
+}
+
+#footer .footer-mv{
+background-image:url("../img/bluegeans-hana.png") ; 
+ background-repeat: no-repeat;
+ background-position: center 90%;
+ background-size: cover;
+  height: 80vh;
+ position: relative;
+}
+
+#footer .footer-mv img{
+ width: 28%; 
+ position: absolute;
+ top: 110%;
+ left: 5%;
+}
+
+#footer .footer-bottom ul{
+ display: flex;
+ justify-content: flex-end;
+ padding: 30px 0 0 0;
+}
+
+#footer .footer-bottom ul li{
+padding-right: 40px;
+}
+
+#footer .footer-bottom ul li{
+ font-size: 35px; 
+}
+
+#footer .footer-bottom{
+background-color: #000b3d;  
+height: 40vh;
+}
+
+
+
+@media screen and (max-width: 1000px){
+
+#about{
+ position: relative; 
+ margin-bottom: 50px;
+} 
+
+#about .img-sp{
+ display: none; 
+}
+
+#about .image-right{
+ width:50%;   
+ order: 2;
+}
+
+#about .image-left{
+ width: 50%; 
+}
+
+#about .text-center {
+width: 50%;
+  order: 3; 
+}
+
+#about .about-content{
+ display: flex;
+ flex-wrap: wrap;
+}
+
+#about .about-content .text-center{ 
+position: absolute; 
+top: 10%; 
+left: 25%;
+text-align: center; 
+font-size: 1.3rem;
+/*  これ指定しないとスカイハイ側文字表示されない */
+z-index: 10; 
+}
+
+#about .about-underline{
+ display: none; 
+}
+}
+
+
+@media screen and (max-width: 850px){
+
+#header{
+height: 80vh;
+background-image:url("../img/HANA-header-sp.avif");
+padding: 20px;
+}
+
+#header .site-title{
+display: none;  
+}
+
+.sec-title{
+ font-size: 2rem; 
+ margin-left: 60px;
+}
+
+.title-area {
+    flex-direction: column;
+    align-items: flex-start;
+    
+  }
+
+
+#vision .vision-text{
+padding: 100px 0 100px 0;
+}
+
+
+#news .list{
+padding:25px 0 100px 0 ;          
+}
+
+#news h3{
+ text-align: center; 
+}
+
+#news p{
+text-align: left;  
+}
+
+#news h3:nth-of-type(4){
+ padding-top: 75px ;
+}
+
+#news p:nth-of-type(4){
+ padding: 25px 0;
+}
+
+
+/* ①もともとの線を消して、疑似要素で作成
+②もしくは線をposition指定 */
+#about .about-underline{ 
+ display: none;  
+}
+
+#about .sec-title-about {
+    text-align: center;
+  }
+
+ #about .sec-title-about::after{  
+content: ""; 
+ display: block; 
+  width: calc(100% + 100px);
+  left: -100px;
+ height: 2px; 
+ background-color: #ffde59;  
+ position: absolute;}
+
+#about .about-content{
+ flex-direction: column; 
+ margin-bottom: 0;
+}
+
+#about .about-text .br{
+display: none;  
+}
+
+#about .about-text p:nth-of-type(2) ,#about .about-text p:nth-of-type(3){
+  margin-bottom: 20px;
+}
+
+#about .img-sp img{
+ height: 450px; 
+ width: 100%;
+}
+
+#about .img-sp{
+ display: block; 
+ background-position: center center;
+ margin-top: 40px;
+}
+
+#about  .about-content .text-center{
+ width: 100%; 
+ position: static;
+}
+
+#about .chanmina , .SKY-HI{
+ display: none; 
+}
+
+#honeys{
+ height: 80vh; 
+ margin-bottom: 0;
+}
+
+#honeys .box{
+ display: block;
+}
+
+#honeys .ryo{
+ top: 54%; 
+ left: 40%;
+ width: 16%;
+}
+
+#honeys .nao{
+ top: 28%; 
+ left: 70%;
+ width: 20%;
+}
+
+#honeys .sairi{
+ top: 70%; 
+ left: 14%;
+ width: 16%;
+}
+
+#honeys .arisu{
+top: 20%;  
+left: 39%;
+width: 23%;
+}
+
+#honeys .aina{
+ top: 61%;
+ left: 66%; 
+ width: 22%;
+}
+
+#honeys .MyM{
+ top: 14%;
+ left: 10%; 
+ width: 22%;
+}
+
+
+
+#footer{
+ height: 75vh;
+}
+
+#footer .footer-mv{
+height: 70vh;  
+object-position: center 90%;
+background-color: #ebe9e9eb;
+}
+
+#footer .footer-bottom{
+height: 30vh;
+}
+
+}
+

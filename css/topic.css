@@ -1,0 +1,43 @@
+
+
+.image-left , .image-right {
+  position: relative;
+}
+
+ .image-left .text-overlay , .image-right .text-overlay {
+	color:			#fff;
+	/* display: block; */
+  text-align: center;
+}
+
+
+.image-left .mask  , .image-right  .mask{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+	width:			100%;
+	height:			100%;
+	position:		absolute;
+	top:			0;
+	left:			0;
+	background-color:	rgba(0,0,0,0.4);
+	-webkit-transition:	all 0.4s ease;
+	transition:		all 0.4s ease;
+	-webkit-transform:	scale(0);	/* 大きさを０にして表示しない */
+	transform:		scale(0);
+}
+
+.image-left:hover .mask  , .image-right:hover .mask {
+	-webkit-transform:	scale(1);	/* 大きさを１にして表示する */
+	transform:		scale(1);
+}
+
+
+
+@media screen and (max-width: 1000px){
+
+.mask {
+display: none;
+}
+
+}

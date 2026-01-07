@@ -1,0 +1,95 @@
+
+/*アコーディオンタイトル*/
+.open-area {
+    position: relative;/*+マークの位置基準とするためrelative指定*/
+    cursor: pointer;
+    font-weight: normal;
+    transition: all .5s ease;
+    display: flex;
+    justify-content: space-between;
+  align-items: center;
+}
+
+.open-area .icon {
+    margin-right: 20px; /* テキストとアイコンの間隔 */
+    /* Flexbox では横並びの要素が親の幅に収まらない場合、デフォルトだと 全員が縮む */
+    /* アイコンに flex-shrink: 0 を付けると、アイコンは縮まない */
+     /* 代わりにテキスト側が自動で折り返される */
+    flex-shrink: 0;    
+}
+
+
+.open-area .icon::before,
+.open-area .icon::after {
+  content: '';
+  position: absolute;
+  /* ちょうど中心にくるように */
+  top: 50%;
+  left: 0;
+  /* 要素変形の基準点　center = 要素の中央 */
+  transform-origin: center;
+}
+
+/* ::before …　通常時：▲（三角形）
+　             .close時：＼（線）
+
+   ::after …　　.close時だけ使って「／」の線にする */
+
+
+
+
+
+/* ▼ */
+.open-area .icon::before {
+  /* 三角形を作る定番の作り方 */
+   width: 0px;
+   height: 0px;
+   border-style: solid;
+   border-width: 15.6px 9px 0 9px;
+   border-color: #FFFFFF transparent transparent transparent;
+   transform: rotate(0deg);
+}
+
+/* 閉じている状態では × を作るための線は非表示 */
+.open-area .icon::after {
+  display: none;
+
+}
+
+/* ===== open時：× 　before と　after 二つの線の共通設定===== */
+/* .close クラスが付くと::before → 45度回転
+::after → -45度回転して表示
+この2本の線が交差して × に見える */
+/* ⇒　結果jsで.close を付け外し */
+.open-area .icon.close::before,
+.open-area .icon.close::after {
+  /* 三角形をやめて
+ → 細い横線に変更 */
+ /* × を作るための線のサイズ */
+  width: 16px;
+  height: 2px;
+  background: #FFFFFF;
+  border: none;              /* ← ▲を消す */
+}
+
+
+
+/*アコーディオンで現れるエリア*/
+.open-text {
+    display: none;/*はじめは非表示*/
+    /* 背景色　同系色/黄色/白など */
+    background:#860612;
+    
+}
+
+
+/* 「／」の線 */
+.open-area .icon.close::before {
+  transform: rotate(45deg);
+}
+
+/* 「＼」の線 */
+.open-area .icon.close::after {
+ display: block;      /* ⇒　もともと display: none; で隠していた線を表示*/
+  transform:rotate(-45deg);
+}
