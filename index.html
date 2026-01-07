@@ -1,13 +1,10 @@
 
-
 <!--
 制作者：辻中千晶
 制作日：9/10
 サイト名：HANA
-サイト番号：オリジナルサイト -ポートフォリオ-
+サイト番号：オリジナルサイト
 -->
-
-
 
 
 <!DOCTYPE html>
@@ -18,12 +15,23 @@
 <title>HANA</title>
 <!-- リセットCSS -->
 <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-<!-- googleフォント -->
+<!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Noto+Serif+JP:wght@200..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Noto+Serif+JP:wght@200..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Zen+Kurenaido&display=swap" rel="stylesheet">
+
 <!-- 自分のCSS -->
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/loading.css">
+<link rel="stylesheet" href="css/accordion.css">
+<link rel="stylesheet" href="css/rotate.css">
+<link rel="stylesheet" href="css/line.css">
+<link rel="stylesheet" href="css/text-move.css">
+<link rel="stylesheet" href="css/hamburger.css"
+          media="screen and (max-width: 850px)">
+<link rel="stylesheet" href="css/img.css">
+<link rel="stylesheet" href="css/topic.css">
+ <!--ファビコン  -->
   <link rel="icon" type="image/png" href="/hana/img/HANA_favicon.png">
 <!-- Font Awesome  -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
@@ -31,75 +39,160 @@
 
 </head>
 
+<body >
 
-    <header id="header">
+    <!-- ローディング画面 -->
+    <div id="loading">
+     <div id="splash_logo"><img src="img/HANA-NEWLOGO.webp" alt="" class="fadeUp"></div>
+    </div>
+
+    <!-- 最初は白黒表示　⇒　徐々にカラー表示 -->
+     <div id="site-wrapper">
+
+
+       <header id="header"  class="shine-effect">
 
          <div class="header-box">
     
-         <h1 class="site-title">
+          <h1 class="site-title">
              <span>
-               <img src="img/logo/logo-H.webp" alt="H">
+               <img src="img/logo-H.webp" alt="H">
              </span>
              <span>
-               <img src="img/logo/logo-A-2.webp" alt="A">
+               <img src="img/logo-A-2.webp" alt="A">
              </span>
              <span>
-               <img src="img/logo/logo-N.webp" alt="N">
+               <img src="img/logo-N.webp" alt="N">
              </span>
              <span>
-               <img src="img/logo/logo-A.webp" alt="A">
+               <img src="img/logo-A.webp" alt="A">
              </span>
-         </h1>
+          </h1>
 
-         <nav>
-               <ul>
-                   <li><a href="#vision">vision</a></li>
-                   <li><a href="#news">news</a></li>
-                   <li><a href="#about">about</a></li>
-                   <li><a href="#honeys">honeys</a></li>
-               </ul>
-         </nav>
-        </div>
-    </header>
+          <nav>
+          <!--  aria-label,,, アクセスビリティ上スクリーンリーダーが「メニューを開閉ボタン」と認識-->
+           <button type="button" class="drawer-btn"  aria-label="メニューを開閉">
+           <span></span>
+           <span></span>
+           <span></span>
+           </button>
+
+            <!-- pc用nav -->
+            <ul id="page-link" class="pc-nav ">
+            <!--アクセスビリティ上 role="menu" と role="menuitem" でメニューとして認識 -->
+                   <li><a  class="btnlinestretches" href="#vision" role="menuitem">vision</a></li>
+                   <li><a  class="btnlinestretches" href="#news" role="menuitem">news</a></li>
+                   <li><a  class="btnlinestretches" href="#about" role="menuitem">about</a></li>
+                   <li><a  class="btnlinestretches" href="#honeys" role="menuitem">honeys</a></li>
+            </ul>
+
+
+
+              <!-- sp用nav -->
+            <ul id="page-link" class="drawer-nav" role="menu">
+                   <li><a  class="btnlinestretches" href="#vision" role="menuitem">vision</a></li>
+                   <li><a  class="btnlinestretches" href="#news" role="menuitem">news</a></li>
+                   <li><a  class="btnlinestretches" href="#about" role="menuitem">about</a></li>
+                   <li><a  class="btnlinestretches" href="#honeys" role="menuitem">honeys</a></li>
+                   <div class="hamburger-sns">
+                    <li><a href="https://www.instagram.com/hana_brave_official" class="fab fa-instagram icon" ></a></li>
+                   <li><a href="https://www.tiktok.com/@hana_brave_official" class="fab fa-tiktok icon"></a></li>
+                   <li><a href="https://www.youtube.com/channel/HANA_BRAVE_Official" class="fab fa-youtube icon"></a></li>
+                   </div>
+            </ul>
+          </div>
+         </nav> 
+        </div> 
+       </header>
 
 
     <main>
 
-     
 
         <section id="vision">
-
+           <div class="title-area">
             <h2 class="sec-title">vision</h2>
+               <p class="sec-title-sub">-彼女たちが掲げる理想-</p>
+        </div>
+        <!-- タイトルボーダー -->
+        <div class="sec-line"></div>
                <div class="wrapper">
                  <div class="vision-text">
-                    <p>誰かを救うヒーローになること</p>
-                    <p>人それぞれ抱えているものは違う</p>
-                    <p>7通りの救い方でたくさんの人を救えるグループに</p>
-                    <p class="point"><strong>“NO”を“YES”に変えるアーティストへ</strong></p>
-                    <p>個性と成長を重ね、「花」として<br>多くの人の心を咲かせ続けること。</p>
-                    <p>花のように人々の心に癒しや感動を与える存在でありたい</p>
+                    <p><span class="blurTrigger">誰かを救うヒーローになること</span></p>
+                    <p><span class="blurTrigger">人それぞれ抱えているものは違う</span></p>
+                    <p><span class="blurTrigger">7通りの救い方でたくさんの人を救えるグループに</span></p>
+                    <p class="point"><span class="blurTrigger">“NO”を“YES”に変えるアーティストへ</span></p>
+                    <p><span class="blurTrigger">個性と成長を重ね、「花」として<br>多くの人の心を咲かせ続けること。</span></p>
+                    <p><span class="blurTrigger">花のように人々の心に癒しや感動を与える存在でありたい</span></p>
                  </div>
                </div>
          </section>
 
 
          <section id="news">
-
+             <div class="title-area">
             <h2 class="sec-title">news</h2>
+          
+            <p class="sec-title-sub">-HANAの歩んだキセキ-</p>
+            </div>
+            <!-- タイトルボーダー -->
+            <div class="sec-line"></div>
                <div class="wrapper">
                  <div class="list">
-                    <dl>
-                       <dt time datetime="2025.04.02">2025.04.02</dt>
-                       <dd>HANA メジャーデビュー</dd>
-                       <dt time datetime="2025.04.02">2025.04.02</dt>
+
+                    <ul class="accordion-area">
+                  <!--li ~ /li までが一つのアコーディオン-->     
+                    <li>
+                      <section>
+                       <h3 class="open-area" time datetime="2025.04.02"><span class="icon"></span>2025.04.02 HANA メジャーデビュー</h3>
+                        <div class="open-text">
+                           <p>Chika（チカ）/ Naoko（ナオコ）/ Jisoo（ジス）/ Yuri（ユリ）/ Momoka（モモカ）/ Koharu（コハル）/Mahina（マヒナ）の7人からなるガールズグループ</p>
+                        </div>
+                      </section>
+                     </li>
+                      <li>
+                      <section>
+                       <h3 class="open-area" time datetime="2025.04.02"><span class="icon"></span>2025.04.02 番組「HANA-CHANnel」スタート</h3>
+                        <div class="open-text">
+                           <p>デビュー初日から冠番組! メンバーたちが成長していく様子を追うバラエティ番組</p>
+                        </div>
+                      </section>
+                     </li>
+                      <li>
+                       <section>
+                       <h3 class="open-area" time datetime="2025.05.16"><span class="icon"></span>2025.05.16 バラエティ番組初出演</h3>
+                        <div class="open-text">
+                           <p>『ニノさん』にプロデューサーであるちゃんみなとともに出演</p>
+                        </div>
+                       </section>
+                      </li>
+                      <li>
+                       <section>
+                       <h3 class="open-area" time datetime="2025.08.01"><span class="icon"></span>2025.08.01 初ファンミーティング<br>「HANA with HONEYs」</h3>
+                        <div class="open-text">
+                           <p>グループの公式ファンネーム「HONEYs（ハニーズ）」を冠した初のファンミーティングツアー ライブパフォーマンス（HANA楽曲中心やMC・Q&A、ファン参加企画など実施</p>
+                        </div>
+                       </section>
+                      </li>
+                      <li>
+                       <section>
+                       <h3 class="open-area" time datetime="2025.08.28"><span class="icon"></span>2025.08.28  HANA初の全国ホールツアー決定</h3>
+                        <div class="open-text">
+                           <p>HANA 1st TOUR 2026 “Born to Bloom” 全17都市・合計25公演 早くも人気のライブツアーでチケット入手は困難</p>
+                        </div>
+                       </section>
+                      </li>               
+            
+                       <!-- <dt time datetime="2025.04.02">2025.04.02</dt>
                        <dd>番組「HANA-CHANnel」スタート</dd>
                        <dt time datetime="2025.05.16">2025.05.16</dt>
                        <dd>バラエティ番組初出演</dd>
                        <dt time datetime="2025.08.01">2025.08.01</dt>
                        <dd>初ファンミーティング<br>「HANA with HONEYs」</dd>
                        <dt time datetime="2025.08.28">2025.08.28</dt>
-                       <dd>HANA初の全国ホールツアー決定</dd> 
-                    </dl>
+                       <dd>HANA初の全国ホールツアー決定</dd>  -->
+                       
+                    </ul>
                  </div>
                </div>
          </section>
@@ -108,37 +201,47 @@
          <section id="about">
 
              <div class="about-content">
-                 
 
                <div class="image-left">
-                   <img src="img/aboout/chanmina_1MK.jpg" alt="ちゃんみな" class="chanmina">
+                   <img src="img/chanmina_1MK.jpg" alt="ちゃんみな" class="chanmina">
+                    <div class="mask">
+                     <p class="text-overlay">主な所属先"NO LABEL MUSIC" ちゃんみな自身が設立したレーベル HANAを全面的にプロデュース</p>
+                    </div>
                </div>
 
                <div class="text-center">
 
+                  <div class="about-sec-title-area">
                    <h2 class="sec-title-about">about</h2>
+                     <p class="sec-title-sub">-HANA誕生秘話-</p>
+                  </div>
+                     
     
+                  <!-- sp用画像 -->
                       <div class="img-sp">
-                         <img src="img/aboout/chanmina-sky-hi.webp" alt="ちゃんみな×SKY-HI">
+                         <img src="img/chanmina-sky-hi.webp" alt="ちゃんみな×SKY-HI">
                       </div>
 
                       <div class="about-text">
-
+                        <!-- タイトルボーダー -->
                         <div class="about-underline">
                         </div>
-                    
-                             <p>オーディション番組<br class="br">”No No Girls”</p>
-                             <p>SKY-HI</p>
-                             <p>×</p>
-                             <p>ちゃんみな</p>
-                             <p>グローバルに通用する<br>ガールズグループの誕生を</p>
-                             <p>前代未聞のオーディションに<br>
-                                全世界から7000通を<br>超える応募が集まった。</p>
+                             <p><span class="blurTrigger">オーディション番組<br class="br">”No No Girls”</span></p>
+                             <p><span class="blurTrigger">SKY-HI</span></p>
+                             <p><span class="blurTrigger">×</span></p>
+                             <p><span class="blurTrigger">ちゃんみな</span></p>
+                             <p><span class="blurTrigger">グローバルに通用する<br>ガールズグループの誕生を</span></p>
+                             <p><span class="blurTrigger">前代未聞のオーディションに<br>
+                                全世界から7000通を<br>超える応募が集まった。</span></p>
                       </div>
                  </div>
 
+
                  <div class="image-right">
                      <img src="https://ogre.natalie.mu/media/news/music/2025/0328/SKYHI_Ncon.jpg?imwidth=1460&imdensity=1&impolicy=hq" alt="SKY-HI" class="SKY-HI">
+                        <div class="mask">
+                            <p class="text-overlay">株式会社BMSGを設立 SKY-HI（代表取締役CEO）自身もラッパーアーティストとして活動 HANAもBMSGに所属</p>
+                        </div>
                  </div>
              
            </div>
@@ -147,22 +250,26 @@
 
 
          <section id="honeys">
-          
+            <div class="title-area">
               <h2 class="sec-title">honeys</h2>
+                <p class="sec-title-sub">-HANAを支える芸能界のファンたち-</p>
+            </div>
+            <!-- タイトルボーダー -->
+                 <div class="sec-line"></div>
+
                 <div class="wrapper">
 
-                    <div class="box">
+                    <div class="box mist" >
                        <div class="img-left">
-                           <img src="img/honeys/arisu_hirose_202204-4.jpg" alt="広瀬アリス" class="arisu">
-                           <img src="img/honeys/asahinao.jpg" alt="朝日奈央" class="nao">
-                           <img src="img/honeys/aina_TOKYO136-01.jpg" alt="アイナ" class="aina">
-                           <img src="img/honeys/kato_ryo_1200.jpg" alt="加藤諒" class="ryo">
-                           <img src="img/honeys/ito_sairi_95b11.webp" alt="伊藤さいり" class="sairi">
-                        
-                    </div>
+                           <img src="img/arisu_hirose_202204-4.jpg" alt="広瀬アリス" class="arisu js-anim fadeRotate">
+                           <img src="img/asahinao.jpg" alt="朝日奈央" class="nao js-anim fadeRotate">
+                           <img src="img/aina_TOKYO136-01.jpg" alt="アイナ" class="aina js-anim fadeRotate">
+                           <img src="img/kato_ryo_1200.jpg" alt="加藤諒" class="ryo js-anim fadeRotate">
+                           <img src="img/ito_sairi_95b11.webp" alt="伊藤さいり" class="sairi js-anim fadeRotate">   
+                       </div>
 
                        <div class="img-main">
-                           <img src="img/honeys/mym_7999d.webp" alt="MyM" class="MyM">
+                           <img src="img/mym_7999d.webp" alt="MyM" class="MyM js-anim fadeRotate">
                        </div>
 
                     </div>
@@ -178,16 +285,16 @@
         
       <div class="footer-mv">
         <span>
-          <img src="img/logo/logo-H.webp" alt="H">
+          <img src="img/logo-H.webp" alt="H">
         </span>
         <span>
-          <img src="img/logo/logo-A-2.webp" alt="A">
+          <img src="img/logo-A-2.webp" alt="A">
         </span>
         <span>
-          <img src="img/logo/logo-N.webp" alt="N">
+          <img src="img/logo-N.webp" alt="N">
         </span>
         <span>
-          <img src="img/logo/logo-A.webp" alt="A">
+          <img src="img/logo-A.webp" alt="A">
         </span>
         </div>
 
@@ -202,8 +309,27 @@
 
     </footer>
 
+    </div>
+
+
+<!-- js　jQuery -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="js/loading.js"></script>
+<script src="js/link-scroll.js"></script>
+<script src="js/accordion.js"></script>
+<script src="js/rotate.js"></script>
+<script src="js/text-move.js"></script>
+<script src="js/hamburger.js"></script>
+<script src="js/img.js"></script>
+
+
+
+       
+  </body> 
     
+ </html> 
+
+   
 
 
     
-  
